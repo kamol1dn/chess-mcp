@@ -1,0 +1,8 @@
+node_modules/
+dist/
+data/
+*.log
+.env
+coverage/
+.chess-mcp/
+data-server.log

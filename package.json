@@ -1,0 +1,72 @@
+{
+  "name": "chess-mcp",
+  "version": "1.0.0",
+  "description": "Chess server where any side can be a human (web), a built-in engine, Claude via the API, or any AI agent over MCP / CLI.",
+  "keywords": [
+    "chess",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "ai-agents",
+    "chess-engine",
+    "llm"
+  ],
+  "homepage": "https://github.com/kamol1dn/chess-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamol1dn/chess-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kamol1dn/chess-mcp/issues"
+  },
+  "author": "kamol1dn",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "bin": {
+    "chess-mcp": "dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/cli/index.ts serve",
+    "dev:web": "vite --config web/vite.config.ts",
+    "build": "npm run build:server && npm run build:web",
+    "build:server": "tsc -p tsconfig.build.json",
+    "build:web": "vite build --config web/vite.config.ts",
+    "start": "node dist/cli/index.js serve",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p web/tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "perft": "tsx scripts/perft.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@fastify/helmet": "^13.2.0",
+    "@fastify/rate-limit": "^11.2.1",
+    "@fastify/static": "^10.1.8",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@resvg/resvg-js": "^2.6.2",
+    "commander": "^15.0.0",
+    "dejavu-fonts-ttf": "^2.37.3",
+    "fastify": "^5.12.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.1.0"
+  }
+}
