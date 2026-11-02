@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "chess": {
+      "command": "node",
+      "args": ["--import", "tsx", "src/cli/index.ts", "mcp"],
+      "env": {
+        "CHESS_SERVER_URL": "http://localhost:8787"
+      }
+    }
+  }
+}
