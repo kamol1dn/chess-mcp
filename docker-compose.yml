@@ -1,0 +1,17 @@
+services:
+  chess:
+    build: .
+    image: chess-mcp:latest
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      CHESS_PUBLIC_URL: ${CHESS_PUBLIC_URL:-http://localhost:8787}
+    volumes:
+      - chess-data:/data
+
+volumes:
+  chess-data:
