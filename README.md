@@ -1,6 +1,7 @@
 # chess-mcp
 
-[![M8ven Score](https://m8ven.ai/badge/mcp/kamol1dn-chess-mcp-th1y50?v=4299b3a44ac76153eb2044e0a2a798de)]
+[
+![M8ven Score](https://m8ven.ai/badge/mcp/kamol1dn-chess-mcp-th1y50?v=4299b3a44ac76153eb2044e0a2a798de)]
 (https://m8ven.ai/mcp/kamol1dn-chess-mcp-th1y50?s=readme)
 [![CI](https://github.com/kamol1dn/chess-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/kamol1dn/chess-mcp/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
